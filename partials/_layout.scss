@@ -206,6 +206,30 @@
   gap: 8px;
   color: $white-normal;
 }
+.footer-icons a:hover {
+  i {
+    animation: translateY 0.8s infinite alternate;
+    color: $red-light;
+  }
+}
+@keyframes translateY {
+  from {
+    transform: translateY(0) translateX(0) scale(1);
+  }
+  to {
+    transform: translateY(-8px) translateX(2px) scale(1.1);
+  }
+}
+@media screen and (max-width: 768px) {
+  @keyframes translateY {
+    from {
+      transform: translateY(0) scale(1);
+    }
+    to {
+      transform: translateY(-8px) scale(1.1);
+    }
+  }
+}
 .btn-whatsapp {
   position: fixed;
   bottom: 14px;
